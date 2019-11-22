@@ -12,3 +12,6 @@ docker-compose is used to easily multiply the services.
 
 Create 5 instances of the devices using ips in the range 8080-8084
 `docker-compose up -d --scale foo=5` 
+
+Testing the code with iot:
+Compile the dowloaded code `go run main.go -o serverCollect`

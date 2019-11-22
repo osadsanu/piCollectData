@@ -38,10 +38,12 @@ func main() {
 				Timeout: time.Millisecond * 1000, // Maximum of 2 secs
 			}
 			req, err := http.NewRequest(http.MethodGet, url, nil)
-			//if err != nil {
-			//	log.Fatal(err)
+			if err != nil {
+				//log.Fatal(err)
+				fmt.Println("error in the request... next get")
+				continue
 				//log.(err)
-			//}
+			}
 			res, getErr := client.Do(req)
 			if getErr != nil {
 				log.Fatal(getErr)
