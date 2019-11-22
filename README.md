@@ -7,3 +7,8 @@ A raspberry pi collects the data from IoT devices connected via wifi.
   * Each time the collector request data, generates an HTTP get to check the latest device value.
 3. Based on the collected data compares the values with the past data and generates another request to another server.
 
+fooServer contains dummy fake server to emulate the data from iot devices.
+docker-compose is used to easily multiply the services. 
+
+Create 5 instances of the devices using ips in the range 8080-8084
+`docker-compose up -d --scale foo=5` 
